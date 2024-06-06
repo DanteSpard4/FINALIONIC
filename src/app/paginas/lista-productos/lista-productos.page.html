@@ -12,7 +12,7 @@
 <ion-content>
   <ion-list>
     <ion-searchbar (ionInput)="filtrarProductos($event)"></ion-searchbar>
-    <ion-item *ngFor="let producto of productosFiltrados">
+    <ion-item *ngFor="let producto of productosFiltrados" [routerLink]="['/formulario-producto', producto.id]">
       <ion-label>
         <h2>{{ producto.producto }}</h2>
         <p>Unidad: {{ producto.unidad }}</p>
