@@ -1,6 +1,6 @@
 // File: inicio.page.scss
 ion-toolbar {
-    --background: #54a7ff; /* Color de fondo */
+    --background: #d740e4; /* Color de fondo */
     --color: #ffffff; /* Color del texto */
 }
 
@@ -10,21 +10,20 @@ ion-title {
 }
 
 ion-content {
-    --background: #c6e1f7; /* Color de fondo */
+    --background: #976390; /* Color de fondo */
     --padding-top: 20px; /* Padding superior */
     --padding-bottom: 20px; /* Padding inferior */
 }
 
 ion-list {
-    background-color: #ffffff; /* Color de fondo del elemento */
+    background-color: #976390; /* Color de fondo del elemento */
     padding: 16px; /* Agrega un padding a la lista */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para la lista */
+    border-radius: 2px; /* Bordes redondeados */
     margin: 0 16px; /* Márgenes para que no toque los bordes del contenedor */
 }
 
 ion-searchbar {
-    --background: #ffffff; /* Fondo blanco para la barra de búsqueda */
+    --background: #E0E0E0; /* Fondo blanco para la barra de búsqueda */
     --color: #000000; /* Color del texto */
     --placeholder-color: #888888; /* Color del placeholder */
     --placeholder-font-style: italic; /* Estilo del texto del placeholder */
@@ -37,12 +36,14 @@ ion-searchbar {
 }
 
 ion-item {
-    --background: #ffffff; /* Color de fondo blanco para cada item */
+    --color: #212121; /* Color del texto Material Design */
+    --background: #F5F5F5; /* Color de fondo Material Design para cada item */
     margin-bottom: 10px; /* Margen inferior entre elementos */
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 5px; /* Bordes redondeados */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para los items */
-    display: block; /* Asegura que los items se muestren en bloque */
-}
+    margin: 3px ;
+    margin-top: 10px;
+  }
 
 ion-item ion-label {
     font-weight: bold; /* Texto en negrita */
@@ -56,16 +57,26 @@ ion-item ion-label h2 {
 
 ion-item ion-label p {
     font-size: 14px; /* Tamaño de fuente para el texto secundario */
-    color: #888888; /* Color de texto secundario */
+    color: #757575; /* Color de texto secundario Material Design */
 }
 
-.button-container {
+.hola2 {
+    display: flex; /* Añade flex al contenedor padre */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+  }
+  
+  .button-container {
     display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
     gap: 10px; /* Espacio entre los botones */
-    margin-top: 10px; /* Margen superior para separar los botones del contenido */
-}
-
-.details-container {
+  }
+  
+  .details-container {
     margin-top: 10px; /* Margen superior para separar los detalles de los botones */
     padding-left: 16px; /* Ajusta el padding según sea necesario */
-}
+  }
+  
+  .hola {
+    justify-content: flex-end;
+  }

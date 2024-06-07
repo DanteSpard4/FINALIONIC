@@ -8,12 +8,21 @@ ion-item {
   margin-bottom: 10px; 
   border-radius: 5px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
-  margin: 10px ;
+  margin: 15px ;
 }
 
 ion-item ion-label {
   font-weight: bold; 
   color: #212121; 
+}
+
+ion-list {
+  margin-top: 15px;
+  background-color: #ffffff; 
+  padding: 16px; 
+  border-radius: 2px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin: 0 16px; 
 }
 
 ion-input {
@@ -31,5 +40,10 @@ ion-button:last-child {
 }
 
 ion-content {
-  --background: #E0E0E0; 
+  --background: #976390; 
+}
+
+.hola3{
+  margin-left: 40%;
+  margin-right: 40% ;
 }

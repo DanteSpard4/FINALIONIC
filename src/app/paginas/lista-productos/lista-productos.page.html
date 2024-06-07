@@ -10,38 +10,18 @@
 </ion-header>
 
 <ion-content>
+  <ion-searchbar (ionInput)="filtrarProductos($event)"></ion-searchbar>
   <ion-list>
-    <ion-searchbar (ionInput)="filtrarProductos($event)"></ion-searchbar>
-    <ion-item *ngFor="let producto of productosFiltrados" [routerLink]="['/formulario-producto', producto.id]">
-      <ion-label>
+    <ion-item *ngFor="let producto of productosFiltrados" >
+      <ion-label class="hola2" [routerLink]="['/formulario-producto', producto.id]">
         <h2>{{ producto.producto }}</h2>
         <p>Unidad: {{ producto.unidad }}</p>
+      </ion-label>
+      <ion-label class="hola" >
         <div class="button-container">
-          <ion-button (click)="toggleDetails(producto.id!)">
-            {{ toggleStates[producto.id!] ? 'Ocultar' : 'Mostrar' }} Detalles
-          </ion-button>
-          <ion-button
-            fill="clear"
-            color="danger"
-            (click)="eliminarProducto(producto.id)"
-          >
+          <ion-button fill="clear" color="danger" (click)="eliminarProducto(producto.id)">
             <ion-icon slot="icon-only" name="trash"></ion-icon>
           </ion-button>
-          <ion-button
-            fill="clear"
-            color="primary"
-            [routerLink]="['/formulario-producto', producto.id]"
-          >
-            <ion-icon slot="icon-only" name="create"></ion-icon>
-          </ion-button>
-        </div>
-        <div *ngIf="toggleStates[producto.id!]" class="details-container">
-          <p>Presupuesto: {{ producto.presupuesto }}</p>
-          <p>Cantidad: {{ producto.cantidad }}</p>
-          <p>Valor Unitario: {{ producto.valorUnitario }}</p>
-          <p>Valor Total: {{ producto.valorTotal }}</p>
-          <p>Proveedor: {{ producto.proveedor }}</p>
-          <p>Fecha de Adquisición: {{ producto.fechaAdquisicion }}</p>
         </div>
       </ion-label>
     </ion-item>

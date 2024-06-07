@@ -136,7 +136,7 @@ export class FormularioProductoPage implements OnInit {
       }
     } else {
       this.errorMessage =
-        'El formulario contiene errores. Por favor, revisa los campos.';
+        'FORMULARIO INCOMPLETO';
     }
   }
   regresar() {
